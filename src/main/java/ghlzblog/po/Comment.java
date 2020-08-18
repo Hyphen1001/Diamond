@@ -1,9 +1,7 @@
 package ghlzblog.po;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 
 @Entity
@@ -14,9 +12,18 @@ public class Comment {
     @GeneratedValue
     private Long commentid;
     private String content;
-    private String uid;
-    private String docid;
-    @Temporal(TemporalType.TIMESTAMP)
+    private long uid;
+    private long docid;
+
+	public Date getTime() {
+		return Time;
+	}
+
+	public void setTime(Date time) {
+		Time = time;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
     private Date Time;
 	public String getContent() {
 		return content;
@@ -24,18 +31,25 @@ public class Comment {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getUid() {
+	public long getUid() {
 		return uid;
 	}
-	public void setUid(String uid) {
+	public void setUid(long uid) {
 		this.uid = uid;
 	}
-	public String getDocid() {
+	public long getDocid() {
 		return docid;
 	}
-	public void setDocid(String docid) {
+	public void setDocid(long docid) {
 		this.docid = docid;
 	}
+	public Long getCommentid() {
+		return commentid;
+	}
+	public void setCommentid(Long commentid) {
+		this.commentid = commentid;
+	}
+
 
   
 }

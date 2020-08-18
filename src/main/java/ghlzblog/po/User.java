@@ -1,9 +1,7 @@
 package ghlzblog.po;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 
 @Entity
@@ -18,7 +16,17 @@ public class User {
     private String password;
     private String email;
     private String avatar;
-    @Temporal(TemporalType.TIMESTAMP)
+    private Long user_id;
+    
+    public Long getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(Long user_id) {
+		this.user_id = user_id;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
     private Date loginTime;
 
    

@@ -12,6 +12,7 @@ public class Group {
 	private long createid;
 	private String groupname;
 	private String meassage;
+
 	public long getCreateid() {
 		return createid;
 	}
@@ -30,4 +31,11 @@ public class Group {
 	public void setMeassage(String meassage) {
 		this.meassage = meassage;
 	}
+	public Long getGid() {
+		return gid;
+	}
+	public void setGid(Long gid) {
+		this.gid = gid;
+	}
+	
 }
